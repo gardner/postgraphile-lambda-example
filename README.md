@@ -29,6 +29,13 @@ Open a new terminal and wait for a **few minutes** after executing:
     -XPOST \
     -d '{ "query": "mutation { authenticate (input: { clientMutationId: \"cmId\", email: \"user@test.test\", password: \"password\" }) { jwtToken { role } } }" }' http://localhost:3000/graphql
 
+    curl -i \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -XPOST \
+    -d '{ "query": "query { getWeather (input: { WOEID: 2351310 }) { }" }' http://localhost:3000/graphql
+
+
 ## Thanks
 The SQL files are from the [forum example](https://github.com/graphile/postgraphile/tree/master/examples/forum)
 
